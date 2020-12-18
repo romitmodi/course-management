@@ -21,7 +21,8 @@
 	</xsd:element>
 
 	<xsd:element name="GetAllCourseDetailsRequest">
-		<xsd:complexType /> <!-- This empty Complex type is need to generate Allcourse Request object. As request doesn't have any input -->
+		<xsd:complexType /> <!-- This empty Complex type is need to generate Allcourse Request object. 
+			As request doesn't have any input -->
 	</xsd:element>
 
 	<xsd:element name="GetAllCourseDetailsResponse">
@@ -33,21 +34,21 @@
 		</xsd:complexType>
 	</xsd:element>
 
-    <xsd:element name="DeleteCourseRequest">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="id" type="xsd:int" />
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+	<xsd:element name="DeleteCourseRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="id" type="xsd:int" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
 
-    <xsd:element name="DeleteCourseResponse">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="status" type="xsd:int" />
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+	<xsd:element name="DeleteCourseResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="status" type="tns:Status" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
 
 	<xsd:complexType name="CourseDetail">
 		<xsd:sequence>
@@ -56,4 +57,11 @@
 			<xsd:element name="description" type="xsd:string" />
 		</xsd:sequence>
 	</xsd:complexType>
+
+	<xsd:simpleType name="Status">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SUCCESS" />
+			<xsd:enumeration value="FAILURE" />
+		</xsd:restriction>
+	</xsd:simpleType>
 </xsd:schema>

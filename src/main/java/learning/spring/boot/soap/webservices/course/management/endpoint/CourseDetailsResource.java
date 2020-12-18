@@ -16,6 +16,7 @@ import learning.spring.boot.soap.webservices.course.management.model.GetAllCours
 import learning.spring.boot.soap.webservices.course.management.model.GetAllCourseDetailsResponse;
 import learning.spring.boot.soap.webservices.course.management.model.GetCourseDetailsRequest;
 import learning.spring.boot.soap.webservices.course.management.model.GetCourseDetailsResponse;
+import learning.spring.boot.soap.webservices.course.management.model.Status;
 import learning.spring.boot.soap.webservices.course.management.service.CourseDetailsService;
 
 /**
@@ -60,7 +61,7 @@ public class CourseDetailsResource {
 	public DeleteCourseResponse deleteCourse(@RequestPayload DeleteCourseRequest request) {
 		int result = courseDetailsService.deleteCourseById(request.getId());
 		DeleteCourseResponse response = new DeleteCourseResponse();
-		response.setStatus(result);
+		response.setStatus(result == 1d ? Status.SUCCESS : Status.FAILURE);
 		return response;
 	}
 
