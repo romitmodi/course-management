@@ -3,15 +3,15 @@
 	targetNamespace="http://www.learningatrmc.com/course"
 	xmlns:tns="http://www.learningatrmc.com/course"
 	elementFormDefault="qualified">
-	
+
 	<xsd:element name="GetCourseDetailsRequest">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="id" type="xsd:integer" />
+				<xsd:element name="id" type="xsd:int" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
-	
+
 	<xsd:element name="GetCourseDetailsResponse">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -20,9 +20,38 @@
 		</xsd:complexType>
 	</xsd:element>
 
+	<xsd:element name="GetAllCourseDetailsRequest">
+		<xsd:complexType /> <!-- This empty Complex type is need to generate Allcourse Request object. As request doesn't have any input -->
+	</xsd:element>
+
+	<xsd:element name="GetAllCourseDetailsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CourseDetail" type="tns:CourseDetail"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+    <xsd:element name="DeleteCourseRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DeleteCourseResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="status" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
 	<xsd:complexType name="CourseDetail">
 		<xsd:sequence>
-			<xsd:element name="id" type="xsd:integer" />
+			<xsd:element name="id" type="xsd:int" />
 			<xsd:element name="name" type="xsd:string" />
 			<xsd:element name="description" type="xsd:string" />
 		</xsd:sequence>
