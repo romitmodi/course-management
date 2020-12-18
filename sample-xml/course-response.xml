@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetCourseDetailsResponse
+	xmlns="http://www.learningatrmc.com/course"
+    xsi:schemaLocation="http://www.learningatrmc.com/course course-details.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CourseDetail>
+		<id>21</id>
+		<name>course-one</name>
+		<description>course one description</description>
+	</CourseDetail>
+</GetCourseDetailsResponse>

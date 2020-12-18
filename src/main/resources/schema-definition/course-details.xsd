@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.learningatrmc.com/course"
+	xmlns:tns="http://www.learningatrmc.com/course"
+	elementFormDefault="qualified">
+	
+	<xsd:element name="GetCourseDetailsRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="id" type="xsd:integer" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="GetCourseDetailsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CourseDetail" type="tns:CourseDetail" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="CourseDetail">
+		<xsd:sequence>
+			<xsd:element name="id" type="xsd:integer" />
+			<xsd:element name="name" type="xsd:string" />
+			<xsd:element name="description" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
