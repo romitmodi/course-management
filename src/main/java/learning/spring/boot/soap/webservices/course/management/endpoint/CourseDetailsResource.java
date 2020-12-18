@@ -8,6 +8,7 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import learning.spring.boot.soap.webservices.course.management.exception.CourseNotFoundException;
 import learning.spring.boot.soap.webservices.course.management.internal.model.Course;
 import learning.spring.boot.soap.webservices.course.management.model.CourseDetail;
 import learning.spring.boot.soap.webservices.course.management.model.DeleteCourseRequest;
@@ -37,6 +38,9 @@ public class CourseDetailsResource {
 	@ResponsePayload
 	public GetCourseDetailsResponse processCourseDetailRequest(@RequestPayload GetCourseDetailsRequest request) {
 		Course course = courseDetailsService.findCourseById(request.getId());
+		if(course==null) {
+			throw new CourseNotFoundException("Course with given id= %s not found."+request.getId());
+		}
 		return mapCourseDetails(course);
 	}
 
