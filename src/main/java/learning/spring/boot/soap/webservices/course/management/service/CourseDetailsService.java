@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import learning.spring.boot.soap.webservices.course.management.internal.model.Course;
+import learning.spring.boot.soap.webservices.course.management.model.bean.Course;
 
 @Service
 public class CourseDetailsService {

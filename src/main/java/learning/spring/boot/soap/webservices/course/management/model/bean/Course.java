@@ -1,4 +1,4 @@
-package learning.spring.boot.soap.webservices.course.management.internal.model;
+package learning.spring.boot.soap.webservices.course.management.model.bean;
 
 public class Course {
 

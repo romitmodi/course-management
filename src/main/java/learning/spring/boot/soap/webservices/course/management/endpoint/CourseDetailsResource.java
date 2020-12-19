@@ -9,7 +9,6 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import learning.spring.boot.soap.webservices.course.management.exception.CourseNotFoundException;
-import learning.spring.boot.soap.webservices.course.management.internal.model.Course;
 import learning.spring.boot.soap.webservices.course.management.model.CourseDetail;
 import learning.spring.boot.soap.webservices.course.management.model.DeleteCourseRequest;
 import learning.spring.boot.soap.webservices.course.management.model.DeleteCourseResponse;
@@ -18,6 +17,7 @@ import learning.spring.boot.soap.webservices.course.management.model.GetAllCours
 import learning.spring.boot.soap.webservices.course.management.model.GetCourseDetailsRequest;
 import learning.spring.boot.soap.webservices.course.management.model.GetCourseDetailsResponse;
 import learning.spring.boot.soap.webservices.course.management.model.Status;
+import learning.spring.boot.soap.webservices.course.management.model.bean.Course;
 import learning.spring.boot.soap.webservices.course.management.service.CourseDetailsService;
 
 /**
