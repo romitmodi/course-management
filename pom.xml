@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>learning.spring.boot.soap.webservices</groupId>
-	<artifactId>course-management</artifactId>
+	<artifactId>soap-course-management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>course-management</name>
+	<name>soap-course-management</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
